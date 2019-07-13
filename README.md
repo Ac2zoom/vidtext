@@ -4,8 +4,11 @@ Vidtext is a python library which provides the functionality to convert the text
 ### Using PIP
 `pip install vidtext`
 ### Directly from the repository
-`git clone https://github.com/anubhavshakya/vidtext.git`
-`python vidtext/setup.py install`
+```bash
+$ git clone https://github.com/anubhavshakya/vidtext.git
+$ cd vidtext
+$ python setup.py install
+```
 ## Usage
 ```python
 import vidtext

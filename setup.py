@@ -23,16 +23,16 @@ setup(
     author_email="inbox.anubhavshakya@gmail.com",
 
     description="This Project or Package Is Made for to Convert the Text to Video",
-    long_description=read("README.rst"),
+    long_description=read("README.md"),
 
     packages=find_packages(exclude=('tests',)),
 
-    install_requires=["pillow","google_images_download","rake_nltk","opencv-python"],
+    install_requires=["pillow", "google_images_download", "rake_nltk", "opencv-python"],
 
     classifiers=[
-    'Development Status :: 4 - Beta', 
-    'Intended Audience :: System Administrators', 
-    'License :: OSI Approved :: Apache Software License',
-    'Programming Language :: Python :: 3'
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: System Administrators',
+        'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python :: 3'
     ],
 )
