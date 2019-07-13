@@ -2,12 +2,13 @@ from .image_utils import ImageText
 from PIL import Image
 import random
 import string
-import cv2,glob,tempfile,shutil
-import os
+import cv2, shutil
 from .directory import TempDir
 from .text import Text
 from .imagesource import getImage
-def TextToVideo(sourceData,vs=0):
+
+
+def TextToVideo(sourceData, vs=0):
 	i = 'A'
 	color = 'white'
 	font = "calibri.ttf"
@@ -31,9 +32,9 @@ def TextToVideo(sourceData,vs=0):
 		size = (width,height)
 		img_array.append(videoimg)
 		i = ''.join(random.choices(string.ascii_uppercase + string.digits))
-	out = cv2.VideoWriter('project.avi',cv2.VideoWriter_fourcc(*'DIVX'), vs, size)
+	out = cv2.VideoWriter('project.mp4',cv2.VideoWriter_fourcc(*'mp4v'), vs, size)
 	for i in range(len(img_array)):
-	    out.write(img_array[i])
+		out.write(img_array[i])
 	out.release()
 	shutil.rmtree(dir_path, ignore_errors=True)
 	shutil.rmtree('downloads', ignore_errors=True)

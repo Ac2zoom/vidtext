@@ -1,5 +1,7 @@
 from rake_nltk import Rake
 from google_images_download import google_images_download
+
+
 def getImage(listData):
 	r = Rake(min_length=1, max_length=10)
 	li = listData
@@ -7,7 +9,7 @@ def getImage(listData):
 	key_collection = r.get_ranked_phrases_with_scores()
 	keyword = key_collection[0][1]
 	response = google_images_download.googleimagesdownload()
-	arguments = {"keywords":keyword,"limit":1,"print_urls":True}
-	reponsePaths = response.download(arguments)
-	path = reponsePaths[keyword][0]
+	arguments = {"keywords": keyword, "limit": 1, "print_urls": True}
+	response_paths = response.download(arguments)
+	path = response_paths[0][keyword][0]
 	return path
