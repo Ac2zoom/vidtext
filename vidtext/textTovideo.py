@@ -38,7 +38,7 @@ def TextToVideo(sourceData, vs=0):
 		draw = ImageDraw.Draw(img)
 		img.save(filename)
 		video_img = cv2.imread(filename)
-		heigh, width, layers = video_img.shape
+		height, width, layers = video_img.shape
 		size = (width, height)
 		img_array.append(video_img)
 		i = ''.join(random.choices(string.ascii_uppercase + string.digits))
